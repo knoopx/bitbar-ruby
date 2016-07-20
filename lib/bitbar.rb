@@ -1,0 +1,5 @@
+require "bitbar/base"
+require "bitbar/item"
+require "bitbar/menu"
+require "bitbar/separator"
+require "bitbar/version"
