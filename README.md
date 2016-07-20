@@ -1,8 +1,6 @@
-# BitBar
+# BitBar Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bitbar`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+bitbar-ruby helps you build BitBar plugins faster.
 
 ## Installation
 
@@ -22,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'bitbar'
+require 'open-uri'
+require 'base64'
+
+BitBar::Menu.new do
+  item "One", size: 18
+  item "Two"
+  separator
+  item "Dropdown" do
+    item "Three"
+    item "Four"
+  end
+  separator
+  item image: Base64.strict_encode64(open("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png").read)
+end
+```
+
 
 ## Development
 
@@ -33,4 +48,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bitbar.
-
