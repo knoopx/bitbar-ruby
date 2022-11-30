@@ -1,4 +1,5 @@
 require 'active_support/core_ext/array/extract_options'
+require 'delegate'
 
 module BitBar
   class Item < Base
